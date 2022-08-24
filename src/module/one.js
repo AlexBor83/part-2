@@ -1,5 +1,5 @@
 const ascOne = () => {
-    console.log('Модуль one');
+    console.log('Модуль one');    
 };
 
 export default ascOne; 
