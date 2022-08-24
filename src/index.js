@@ -1,6 +1,9 @@
-console.log('Привет');
-import ascOne from './module/one';
-import ascTwo from './module/two';
+import timer from './module/timer';
 
-ascOne();
-ascTwo();
+
+timer('5 september 2022');
+
+
+
+
+
