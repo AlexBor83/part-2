@@ -1,6 +1,4 @@
 const timer = (dedLine) => {
-  console.log('Модуль one++');
-
   const timerDays = document.getElementById('timer-days');
   const timerHours = document.getElementById('timer-hours');
   const timerMinutes = document.getElementById('timer-minutes');
@@ -30,7 +28,7 @@ const timer = (dedLine) => {
 
     if (timerDays.textContent.length === 1) {
       timerDays.textContent = '0' + timerDays.textContent;
-    }    
+    }
 
     if (timerHours.textContent.length === 1) {
       timerHours.textContent = '0' + timerHours.textContent;
