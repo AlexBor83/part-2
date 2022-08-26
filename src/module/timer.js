@@ -45,8 +45,8 @@ const timer = (dedLine) => {
 
   const updateClock = () => {
     let getTime = getTimeRemaining();
-
-    // console.log(typeof getTime.hours);
+    
+    // console.log('timer');
 
     if (getTime.timeRemaining > 0) {
       timerDays.textContent = getTime.days;
@@ -57,12 +57,13 @@ const timer = (dedLine) => {
       timerHours.textContent = '00';
       timerMinutes.textContent = '00';
       timerSeconds.textContent = '00';
+      clearInterval(timerDiscount);
     }
 
     getZero();
   };
 
-  setInterval(updateClock, 1000);
+  const timerDiscount  = setInterval(updateClock, 1000);
 };
 
 export default timer;
