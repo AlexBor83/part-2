@@ -5,15 +5,16 @@ const modal = () => {
     const modalClose = modal.querySelector('.popup-close');
     let count = 0;
     let animaite;
+
+    modalContent.style.transform = 'translateX(-50%)'; 
     
     const animaiteModal = () => {
         count++;
-        console.log(count);
-
+       
         animaite = requestAnimationFrame (animaiteModal);
 
-        if (count < 20) {
-            modalContent.style.left = count*3 + '%'; 
+        if (count <= 10) {
+            modalContent.style.left = count*5 + '%'; 
         } else {
             cancelAnimationFrame(animaite);
         }        
@@ -27,7 +28,7 @@ const modal = () => {
                 animaiteModal();
             } else {
                 modalContent.style.left = '50%';
-                modalContent.style.transform = 'translateX(-50%)';
+                // modalContent.style.transform = 'translateX(-50%)';
             }            
         });
     });
