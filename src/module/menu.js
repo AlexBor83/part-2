@@ -12,26 +12,24 @@ const menu = () => {
 
   menuBtn.addEventListener('click', handelMenu);
 
-  closeBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    handelMenu();
-  });
-
-  menuItems.forEach((item) => {
-    item.addEventListener('click', handelMenu);
-  });
-
-  menuItems.forEach((item) => {
-    item.addEventListener('click', (e) => {
+  menu.addEventListener('click', (e) => {
+    
+    if (e.target.matches('li a')) {
       e.preventDefault();
-
+      handelMenu();
+      const item = e.target.closest('a');
       const itemId = item.getAttribute('href').substring(1);
-
+      
       document.getElementById(itemId).scrollIntoView({
         block: 'start',
         behavior: 'smooth',
       });
-    });
+    }
+
+    if (e.target.classList.contains('close-btn')) {
+      e.preventDefault();
+      handelMenu();
+    }
   });
 
   scrollBtn.addEventListener('click', (e) => {
