@@ -11,7 +11,7 @@ import slider from './module/slider';
 timer('5 september 2022');
 menu();
 modal();
-calculator();
+calculator(100);
 form();
 tabs();
 slider('portfolio-content', 'portfolio-item', 'portfolio-item-active', 'dot-active');

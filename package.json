@@ -2,11 +2,14 @@
   "name": "webpack",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://AlexBor83.github.io/part-2",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
     "watch": "webpack --watch --mode=development",
-    "start": "webpack serve --mode=development --open"
+    "start": "webpack serve --mode=development --open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Alex",
   "license": "ISC",
@@ -14,5 +17,8 @@
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.10.0"
+  },
+  "dependencies": {
+    "gh-pages": "^4.0.0"
   }
 }

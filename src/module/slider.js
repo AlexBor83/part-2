@@ -10,7 +10,7 @@ const slider = (
     const slides = document.querySelectorAll(`.${classSlides}`);
 
     if(!sliderBlock || !slides) {
-      return console.log('сброс');
+      return;
     }
 
     const blockDots = document.querySelector('.portfolio-dots');
