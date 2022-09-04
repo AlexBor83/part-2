@@ -4,9 +4,7 @@ const menu = () => {
   const scrollBtn = document.querySelector('main>a');
 
   const menu = document.querySelector('menu');
-  // const closeBtn = menu.querySelector('.close-btn');
-  // const menuItems = menu.querySelectorAll('ul>li>a');
-
+  
   const handelMenu = () => {
     menu.classList.toggle('active-menu');
   };
