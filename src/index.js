@@ -4,6 +4,7 @@ import modal from './module/modal';
 import calculator from './module/calculator';
 import form from './module/form';
 import tabs from './module/tabs';
+import slider from './module/slider';
 
 
 
@@ -13,9 +14,11 @@ modal();
 calculator();
 form();
 tabs();
+slider('portfolio-content', 'portfolio-item', 'portfolio-item-active', 'dot-active');
 
 
-
+// const sliderBlock = document.querySelector('.portfolio-content');
+// const slides = document.querySelectorAll('.portfolio-item');
 
 
 
