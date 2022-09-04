@@ -50,17 +50,9 @@ const calculator = (price = 100) => {
         e.target === calcCount || e.target === calcDay) {
             countCalc();
         }
-  })
-
- 
-
-
-
-
+  });
 
   validationCalc();
-
-  
 };
 
 export default calculator;
