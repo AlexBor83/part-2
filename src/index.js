@@ -14,10 +14,11 @@ modal();
 calculator();
 form();
 tabs();
-slider();
+slider('portfolio-content', 'portfolio-item', 'portfolio-item-active', 'dot-active');
 
 
-
+// const sliderBlock = document.querySelector('.portfolio-content');
+// const slides = document.querySelectorAll('.portfolio-item');
 
 
 
