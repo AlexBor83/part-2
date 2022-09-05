@@ -1,10 +1,10 @@
 const menu = () => {
   const body = document.querySelector('body');
-  const menuBtn = document.querySelector('.menu');
+  // const menuBtn = document.querySelector('.menu');
   const scrollBtn = document.querySelector('main>a');
 
   const menu = document.querySelector('menu');
-  
+
   const handelMenu = () => {
     menu.classList.toggle('active-menu');
   };
@@ -12,9 +12,10 @@ const menu = () => {
   body.addEventListener('click', (e) => {
     if (e.target.closest('.menu')) {
       handelMenu();
-    }
-
-    if (e.target.classList.contains('close-btn')) {
+    } else if (
+      e.target.classList.contains('close-btn') ||
+      !e.target.closest('.menu')
+    ) {
       e.preventDefault();
       handelMenu();
     }
