@@ -13,11 +13,13 @@ const menu = () => {
     if (e.target.closest('.menu')) {
       handelMenu();
     } else if (
-      e.target.classList.contains('close-btn') ||
-      !e.target.closest('.menu')
-    ) {
+      e.target.classList.contains('close-btn')) {
       e.preventDefault();
-      handelMenu();
+      menu.classList.remove('active-menu');
+    } else if (
+      !e.target.closest('menu')
+    ) {
+      menu.classList.remove('active-menu');
     }
 
     if (e.target.matches('li a')) {
