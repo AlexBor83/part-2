@@ -40,7 +40,7 @@ const calculator = (price = 100) => {
         totalValue = 0;
     }
 
-    calcTotal.textContent = totalValue;
+    calcTotal.textContent = Math.round(totalValue);
     
   };
 
