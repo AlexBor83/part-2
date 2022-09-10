@@ -4,6 +4,8 @@ const timer = (dedLine) => {
   const timerMinutes = document.getElementById('timer-minutes');
   const timerSeconds = document.getElementById('timer-seconds');
 
+  let timerDiscount
+
   const getTimeRemaining = () => {
     let dateStop = new Date(dedLine).getTime();
     let dateNow = new Date().getTime();
@@ -61,7 +63,8 @@ const timer = (dedLine) => {
     getZero();
   };
 
-  const timerDiscount = setInterval(updateClock, 1000);  
+  updateClock();
+  timerDiscount = setInterval(updateClock, 1000);    
 };
 
 export default timer;
