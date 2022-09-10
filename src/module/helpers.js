@@ -17,4 +17,23 @@ function animate({ timing, draw, duration }) {
   });
 }
 
-export {animate}
+const animateCalc = (num, element) => {
+  const time = 2000;
+  const step = 100;
+
+  const animateNum = () => {
+    let n = 0;
+    let timeAnimate = Math.round(time / (num / step));
+
+    let interval = setInterval(() => {
+      n = n + step;
+      if (n === num) {
+        clearInterval(interval);
+      }
+      element.textContent = n;
+    }, timeAnimate);
+  };
+  animateNum();
+};
+
+export { animate, animateCalc };
